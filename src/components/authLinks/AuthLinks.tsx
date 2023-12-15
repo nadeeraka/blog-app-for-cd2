@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import styles from "./authLinks.module.css";
 import { useState } from "react";
