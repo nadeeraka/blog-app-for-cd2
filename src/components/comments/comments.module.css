@@ -29,11 +29,11 @@
   cursor: pointer;
 }
 
-.comments {
+.comments{
   margin-top: 50px;
 }
 
-.comment {
+.comment{
   margin-bottom: 50px;
 }
 
@@ -60,11 +60,11 @@
   font-weight: 500;
 }
 
-.date {
+.date{
   font-size: 14px;
 }
 
-.desc {
+.desc{
   font-size: 18px;
   font-weight: 300;
 }

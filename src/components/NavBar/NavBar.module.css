@@ -49,7 +49,7 @@
   }
 }
 @media screen and (max-width: 640px) {
-  .links {
+  .links{
     justify-content: flex-end;
   }
   .link {
