@@ -1,10 +1,8 @@
 import { getAuthSession } from "@/utils/auth";
 import prisma from "@/utils/connect";
-import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
-  console.log("run");
   const { searchParams } = new URL(req.url);
 
   const page = searchParams.get("page");
@@ -36,7 +34,6 @@ export const GET = async (req) => {
 
 // CREATE A POST
 export const POST = async (req) => {
-  console.log("uncccccccccccccccccccccccccccc");
   const session = await getAuthSession();
 
   if (!session) {

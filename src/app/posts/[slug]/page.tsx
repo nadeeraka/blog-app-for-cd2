@@ -1,5 +1,5 @@
 import Menu from "@/components/Menu/Menu";
-import styles from "./page.module.css";
+import styles from "./singlePage.module.css";
 import Image from "next/image";
 import Comments from "@/components/comments/Comments";
 
@@ -9,7 +9,7 @@ const getData = async (slug) => {
   });
 
   if (!res.ok) {
-    throw new Error("Failed");
+    console.error("error occured ", res);
   }
 
   return res.json();

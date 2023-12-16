@@ -66,7 +66,7 @@ const WritePage = () => {
   }
 
   if (status === "unauthenticated") {
-    redirect("/login");
+    // redirect("/login");
   }
 
   const slugify = (str) =>
