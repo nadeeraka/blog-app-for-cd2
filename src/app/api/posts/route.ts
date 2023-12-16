@@ -34,13 +34,13 @@ export const GET = async (req) => {
 
 // CREATE A POST
 export const POST = async (req) => {
-  const session = await getAuthSession();
+  // const session = await getAuthSession();
 
-  if (!session) {
-    return new NextResponse(
-      JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
-    );
-  }
+  // if (!session) {
+  //   return new NextResponse(
+  //     JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
+  //   );
+  // }
 
   try {
     const body = await req.json();
