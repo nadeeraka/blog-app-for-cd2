@@ -4,7 +4,7 @@ import Image from "next/image";
 import styles from "./editor.module.css";
 import { useEffect, useState } from "react";
 import "react-quill/dist/quill.bubble.css";
-import { useRouter } from "next/navigation";
+import { redirect, useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 import {
   getStorage,
@@ -66,7 +66,7 @@ const WritePage = () => {
   }
 
   if (status === "unauthenticated") {
-    router.push("/");
+    redirect("/login");
   }
 
   const slugify = (str) =>

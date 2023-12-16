@@ -4,19 +4,20 @@ import Pagination from "../pagination/Pagination";
 import Image from "next/image";
 import Card from "../card/Card";
 
-const getData = async (page, cat) => {
+const getData = async (page, cat = 0) => {
+  console.log(page, cat, "ssssss");
   const res = await fetch(
-    `http://localhost:3000/api/posts?page=${page}&cat=${cat || ""}`,
+    `http://localhost:3000/api/posts?page=${page}&cat=${cat}`,
     {
       cache: "no-store",
     }
   );
 
   if (!res.ok) {
-    throw new Error("Failed");
+    console.error("error occer", res);
   }
 
-  return res.json();
+  return res;
 };
 
 const CardList = async ({ page, cat }) => {

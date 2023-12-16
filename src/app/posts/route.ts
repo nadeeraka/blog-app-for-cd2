@@ -4,6 +4,7 @@ import { redirect } from "next/navigation";
 import { NextResponse } from "next/server";
 
 export const GET = async (req) => {
+  console.log("run");
   const { searchParams } = new URL(req.url);
 
   const page = searchParams.get("page");
@@ -40,7 +41,6 @@ export const POST = async (req) => {
 
   if (!session) {
     return new NextResponse(
-      //   redirect("/login")
       JSON.stringify({ message: "Not Authenticated!" }, { status: 401 })
     );
   }
